@@ -3,91 +3,119 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Opay Transaction Receipt – Sample Only</title>
+<title>Opay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
 <style>
   body {
-    background:#f5f6fa;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+    background:#f4f6f8;
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 10px;
   }
   .receipt {
-    background: #fff;
-    border-radius: 12px;
-    width: 360px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    padding: 24px;
-    position: relative;
+    background:#fff;
+    border-radius:16px;
+    width:360px;
+    padding:28px 24px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    position:relative;
   }
   .watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-20deg);
-    font-size: 28px;
-    color: rgba(0,0,0,0.06);
-    white-space: nowrap;
-    pointer-events: none;
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:28px;
+    color:rgba(0,0,0,0.05);
+    white-space:nowrap;
+    pointer-events:none;
   }
-  h1 {
-    text-align: center;
-    color: #0bb874; /* PayPay green */
-    margin: 0;
-    font-size: 24px;
+  .brand {
+    text-align:center;
+    font-weight:600;
+    font-size:22px;
+    color:#00b873;
+    margin-bottom:4px;
+  }
+  .title {
+    text-align:center;
+    color:#555;
+    font-size:15px;
+    margin-bottom:18px;
   }
   .amount {
-    text-align: center;
-    color: #0bb874;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 16px 0 8px;
+    text-align:center;
+    font-size:30px;
+    font-weight:600;
+    color:#00b873;
+    margin-bottom:8px;
   }
-  .success {
-    text-align: center;
-    color: #333;
-    margin-bottom: 16px;
+  .status {
+    text-align:center;
+    color:#222;
+    font-size:16px;
+    margin-bottom:20px;
   }
-  .section-title {
-    font-weight: 600;
-    margin-top: 20px;
-    border-top: 1px dashed #ccc;
-    padding-top: 12px;
-    font-size: 14px;
-    color: #666;
+  .row {
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+    font-size:15px;
+    color:#333;
   }
-  .detail {
-    font-size: 15px;
-    margin-bottom: 6px;
-    color: #222;
+  .label { color:#666; }
+  .divider {
+    border-top:1px dashed #ccc;
+    margin:18px 0;
   }
   .footer {
-    margin-top: 24px;
-    font-size: 12px;
-    color: #777;
-    text-align: center;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+    margin-top:16px;
+    line-height:1.4;
   }
 </style>
 </head>
 <body>
   <div class="receipt">
-    <>
-    <h1>OPay</h1>
-    <p style="text-align:center; margin-top:4px;">Transaction Receipt</p>
+    <div class="watermark">OPay</div>
+    <div class="brand">Opay </div>
+    <div class="title">Transaction Receipt</div>
 
     <div class="amount">₦300,000.00</div>
-    <div class="success">Successful<br/>Sept 29, 2025&nbsp; 14:45</div>
+    <div class="status">Successful<br>Sept 29, 2025&nbsp;14:45</div>
 
-    <div class="section-title">Recipient Details</div>
-    <div class="detail">Opeyemi Temilola</div>
-    <div class="detail">OPay&nbsp;|&nbsp;0803-555-1234</div>
+    <div class="divider"></div>
 
-    <div class="section-title">Sender Details</div>
-    <div class="detail">Wale Adebo</div>
-    <div class="detail">OPay&nbsp;|&nbsp;0706-777-5678</div>
+    <div class="row">
+      <div class="label">Recipient:</div>
+      <div>Opeyemi Temilola</div>
+    </div>
+    <div class="row">
+      <div class="label">Recipient Phone:</div>
+      <div>0803-555-1234</div>
+    </div>
 
-    <div class="section-title">Transaction No.</div>
-    <div class="detail">PP20250929000123456789</div>
+    <div class="divider"></div>
+
+    <div class="row">
+      <div class="label">Sender:</div>
+      <div>Wale Adebo</div>
+    </div>
+    <div class="row">
+      <div class="label">Sender Phone:</div>
+      <div>0706-777-5678</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row">
+      <div class="label">Transaction ID:</div>
+      <div>PP20250929000123456789</div>
+    </div>
 
     <div class="footer">
       Enjoy a better life with OPay. Get free transfers, withdrawals, bill payments, instant loans, and good annual interest On your savings. OPay is licensed by the Central Bank of Nigeria and insured by the NDIC.
